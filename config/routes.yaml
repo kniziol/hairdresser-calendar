@@ -1,3 +1,4 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+api_reservations_show:
+    path:       /api/reservations/{date}
+    controller: App\Infrastructure\Controller\ReservationController::getReservations
+    methods:    GET|HEAD

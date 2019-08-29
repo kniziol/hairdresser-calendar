@@ -1,0 +1,10 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Infrastructure\Entity\Client" repository-class="App\Infrastructure\Repository\ClientRepository">
+        <id name="id" type="integer">
+            <generator/>
+        </id>
+        <field name="firstName" length="50"/>
+        <field name="lastName" length="100"/>
+        <field name="phone" length="20"/>
+    </entity>
+</doctrine-mapping>
