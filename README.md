@@ -1,17 +1,25 @@
 # Hairdresser Calendar
 
+---
+
 # Installation
 
 Run commands:
 
-1. `docker-compose up -d`
-2. `docker-compose run --rm composer install`
+1. Start Docker containers
+    ```shell
+    docker-compose up -d
+    ```
+2. Install Composer packages
+    ```shell
+    docker-compose run --rm composer install
+    ```
 
 # Tests running
 
 ### PHPUnit
 
-```bash
+```shell
 docker-compose exec php bin/phpunit
 ```
 
@@ -19,12 +27,12 @@ docker-compose exec php bin/phpunit
 
 ### Infection (mutation testing)
 
-```bash
+```shell
 docker-compose exec php vendor/bin/infection --ansi --threads=5 --coverage=build/reports/infection
 ```
 
 ### PHPStan
 
-```bash
+```shell
 docker-compose exec php vendor/bin/phpstan analyse --ansi
 ```
