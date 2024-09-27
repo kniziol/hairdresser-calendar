@@ -1,5 +1,3 @@
-version: '2'
-
 services:
     #
     # Required to run project
